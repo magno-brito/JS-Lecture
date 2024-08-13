@@ -168,6 +168,45 @@ const pessoa = {
 
 
 ```
+Por fim, podemos criar uma função construtura de objetos. Com esta função, podemos instanciar vários objetos de um mesmo tipo.
+
+```
+function Carro(nome, marca, cor, ano){
+    this.nome = nome
+    this.marca = marca
+    this.cor = cor
+    this.ano = ano
+}
+
+const uno = new Carro('Uno', 'Fiat', 'Amarelo',2010)
+const corsa = new Carro('Corsa', 'Chevrolet', 'Branco',2000)
+const palio = new Carro('Palio', 'Fiat', 'Preto',2010)
+const siena = new Carro('Siena', 'Fiat', 'branco',2019)
 
 
+```
+Podemos também acessar os atributos de um objeto através de um loop for ou while
+
+```
+function Carro(nome, marca, cor, ano){
+    this.nome = nome
+    this.marca = marca
+    this.cor = cor
+    this.ano = ano
+}
+
+const uno = new Carro('Uno', 'Fiat', 'Amarelo',2010)
+const corsa = new Carro('Corsa', 'Chevrolet', 'Branco',2000)
+const palio = new Carro('Palio', 'Fiat', 'Preto',2010)
+const siena = new Carro('Siena', 'Fiat', 'branco',2019)
+
+let vetor = [uno, corsa, palio, siena]
+for(let p in vetor){
+    for(let i in vetor[p]){
+        console.log(vetor[p][i])
+    }
+    
+}
+
+```
 
