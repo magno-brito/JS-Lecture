@@ -210,3 +210,46 @@ for(let p in vetor){
 
 ```
 
+## Eventos
+
+Podemos interagir com elementos presentes em uma página HTML utlizando JavaScript. Existem diferentes métodos que podem gerar diferentes modificações na página.
+O <b>getElementById</b> é o mais comum deles. O código abaixo combina este método com o <b>onclick()</b>.
+
+```
+<button id="botao1" value="botao1" onclick="funcao1(this)">Botão</button>
+    <script>
+        botao = document.getElementById("botao1");
+        function funcao1(botao){
+            botao.innerHTML = "Funciona!";
+        }
+    </script>
+
+```
+O event <b>onchange</b> é utilizado quando selecionamos um valor em um select, por exemplo.
+
+```
+ <select id="select"  onchange="funcao2()">
+        <option value="A">Aline</option>
+        <option value="B">Bianca</option>
+        <option value="C">Carla</option>
+        <option value="D">Dario</option>
+    </select>
+
+    <p id="aluno"></p>
+
+...
+function funcao2(){
+            var selecionado = document.getElementById("select").value;
+            document.getElementById("aluno").innerHTML=selecionado
+
+            
+        }
+
+```
+
+Onmouseover é um event que muda alguma coisa quando o mouse passa por cima do elemento.
+
+```
+    <button onmouseover="this.style.color='#FF0000'">Mouseover</button>
+
+```
