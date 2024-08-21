@@ -253,3 +253,42 @@ Onmouseover é um event que muda alguma coisa quando o mouse passa por cima do e
     <button onmouseover="this.style.color='#FF0000'">Mouseover</button>
 
 ```
+
+## Numbers
+
+Diferentes de linguagens como Jave, JS tem apenas um típo de número: number. Quando quisermos representar números grandes ou pequenos podemos escrevê-los da seguinte maneira:
+
+```
+let x = 1.2e5;
+let y = 1.2e-5;
+
+```
+JS os números são armazenadados com 64-bit de ponto flutuante. Engraçado, JS pode fazer uma conversão entre String e Number caso a operação abaixo seja executada:
+
+```
+let x = '200';
+let y = '2';
+let z = x/y;
+console.log(z) => 100
+
+```
+
+O error NaN (Not a Number) aparece quando quisermos fazer operações com strings que não podem ser convertidas em números com números. Mas NaN é também um tipo de número. 
+
+```
+let x = '200';
+let y = 'uva';
+let z = x/y;
+console.log(z) => NaN
+
+```
+
+Um outro tipo de número interessante da classe number  é Infinity (ou -Infinity). Este número aparece em divisões por zero ou quando um loop ultrapasse o valor do maior número possível.
+
+```
+let x = 2;
+let y = 0;
+console.log(x/y) => Infinity
+
+```
+
